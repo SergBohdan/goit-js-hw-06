@@ -30,4 +30,16 @@ button {
   gap: 16px;
 }
 
+#boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.box {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+}
+
 
