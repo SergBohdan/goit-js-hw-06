@@ -1,12 +1,13 @@
 const categoriesList = document.querySelector('#categories');
-const categoriesItems = categoriesList.querySelectorAll('.item');
+const categoryItems = categoriesList.children;
 
-console.log(`Number of categories: ${categoriesItems.length}`);
+console.log('Number of categories:', categoryItems.length);
 
-categoriesItems.forEach(item => {
-    const categoryTitle = item.querySelector('h2').textContent;
-    const categoryItems = item.querySelectorAll('li');
-  
-    console.log(`Category: ${categoryTitle}`);
-    console.log(`Number of items: ${categoryItems.length}`);
-  });
+for (let i = 0; i < categoryItems.length; i++) {
+  const item = categoryItems[i];
+  const categoryTitle = item.firstElementChild.textContent;
+  const categoryElements = item.lastElementChild.children.length;
+
+  console.log(`Category: ${categoryTitle}`);
+  console.log(`Elements: ${categoryElements}`);
+}
